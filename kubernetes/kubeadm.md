@@ -97,8 +97,18 @@ kubeadm token create --print-join-command
 ```bash
 sudo apt install docker.io -y
 ```
+
 ```bash
+
 sudo chmod 777 /var/run/docker.sock
 ```
+
+#### Troubleshooting
+- <i> if you install docker before kubernetes installation then it will show below error after ececuting join command on worker node
+Found multiple CRI endpoints on the host. Please define which one do you wish to use by setting the 'criSocket' field in the kubeadm configuration file: unix:///var/run/containerd/containerd.sock, unix:///var/run/crio/crio.sock <I>
+- <i> To resolve this issue pass -cri-socket /var/run/crio/crio.sock before --v=5 <i>  
+
+
+
 
 
