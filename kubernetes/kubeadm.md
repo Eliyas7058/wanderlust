@@ -11,14 +11,6 @@ sudo su
 sudo apt-get update
 ```
 
-- <i> Installing Docker </i>
-```bash
-sudo apt install docker.io -y
-```
-```bash
-sudo chmod 777 /var/run/docker.sock
-```
-
 - <i> Create a shell script 1.sh and paste the below code and run it :
 ```bash
 #!/bin/bash
@@ -96,6 +88,14 @@ kubeadm token create --print-join-command
 
 ```bash
 <join-command> --v=5
+
+- <i> Installing Docker on All nodes</i>
+```bash
+sudo apt install docker.io -y
+```
+```bash
+sudo chmod 777 /var/run/docker.sock
+```
 ```
 
 
