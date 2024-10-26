@@ -88,17 +88,16 @@ kubeadm token create --print-join-command
 
 ```bash
 <join-command> --v=5
-...
+```
 
-
-### On Both nodes
+### On Both Nodes
 - <i> Install docker on both nodes </i>
+
 ```bash
 sudo apt install docker.io -y
 ```
 ```bash
 sudo chmod 777 /var/run/docker.sock
 ```
-
 
 
