@@ -84,6 +84,7 @@ kubeadm token create --print-join-command
 ```
 
 ### On Worker node
+- <i> Go to master node security group > edit inbound rule and open 6443 port and save changes </i>
 - <i> Paste the join command you got from the master node and append --v=5 at the end </i>
 
 ```bash
