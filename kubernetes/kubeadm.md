@@ -84,7 +84,7 @@ kubeadm token create --print-join-command
 ```
 
 ### On Worker node
-- <i> Go to master node security group > edit inbound rule and open 6443 port and save changes </i>
+- <i> Go to master node security group > edit inbound rule and open 6443 port and save changes otherwise you will get error in logs after execurting below join command - request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers) </i>
 - <i> Paste the join command you got from the master node and append --v=5 at the end </i>
 
 ```bash
