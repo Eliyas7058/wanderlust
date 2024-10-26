@@ -11,7 +11,7 @@ sudo su
 sudo apt-get update
 ```
 
-- <i> Create a shell script 1.sh and paste the below code and run it :
+- <i> Create a shell script 1.sh and paste the below code and run it on both nodes:
 ```bash
 #!/bin/bash
 # disable swap
