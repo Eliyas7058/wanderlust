@@ -90,7 +90,9 @@ kubeadm token create --print-join-command
 <join-command> --v=5
 ...
 
-**### On Both nodes**
+
+### On Both nodes
+- <i> Install docker on both nodes </i>
 ```bash
 sudo apt install docker.io -y
 ```
