@@ -103,6 +103,8 @@ sudo apt install docker.io -y
 sudo chmod 777 /var/run/docker.sock
 ```
 
+#### since we are using CRIO - container runtime to check container on master or worker node use command - sudo crictl ps
+
 #### Troubleshooting
 
 - <i> if you install docker before kubernetes installation then it will show below error after ececuting join command on worker node
