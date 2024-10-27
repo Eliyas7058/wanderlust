@@ -104,9 +104,23 @@ sudo chmod 777 /var/run/docker.sock
 ```
 
 #### Troubleshooting
+
 - <i> if you install docker before kubernetes installation then it will show below error after ececuting join command on worker node
 Found multiple CRI endpoints on the host. Please define which one do you wish to use by setting the 'criSocket' field in the kubeadm configuration file: unix:///var/run/containerd/containerd.sock, unix:///var/run/crio/crio.sock <I>
-- <i> To resolve this issue pass -cri-socket /var/run/crio/crio.sock before --v=5 <i>  
+
+- <i> To resolve this issue pass -cri-socket /var/run/crio/crio.sock before --v=5 <i>
+...
+
+  - <i>sometimes if you are executing kubectl get nodes with ubuntu user you will encounter below error
+  The connection to the server localhost:8080 was refused - did you specify the right host or port? <i>
+
+  <i>Reason - KUBECONFIG environment variable not set hence connection refused issue occured <i>
+
+<i> Solution - execute below command with youruser/ubuntu user
+mkdir -p "$HOME"/.kube
+sudo cp -i /etc/kubernetes/admin.conf "$HOME"/.kube/config
+sudo chown "$(id -u)":"$(id -g)" "$HOME"/.kube/config <i>
+  
 
 
 
